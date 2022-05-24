@@ -1,0 +1,35 @@
+{%extends 'catalog/base.html' %}
+{% block content%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body>
+{%if form.errors %}
+  <p> Your username or password was incorrect. Try again</p>
+{%endif%}
+{%if next %}
+{%if user.is_authenticated %}
+  <p> You dont have permission for this page</p>
+{%else%}
+  <p>Please login to see this page</p>
+{%endif%}
+{%endif%}
+
+<form method="POST" action="{%url 'login' %}">
+{%csrf_token%}
+{{form.username.label_tag}}
+{{form.username}}
+{{form.password.label_tag}}
+{{form.password}}
+<input type="submit" value="Login">
+<input type="hidden" name="next" value="{{next}}">
+
+
+</form>
+
+</body>
+</html>
+{%endblock%}
