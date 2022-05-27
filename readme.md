@@ -3,7 +3,8 @@
 Stažení z Github
 `git clone https://github.com/akanovsky/compounds.git`
 
-Instalace balíčků Django,Django filters, rdkit
+Instalace balíčků Django,Django filters, rdkit.
+V adresáři compounds spustit
 `pip install -r requirements.txt`
 
 Po instalaci je potřeba nastavit příkazovou řádku do adresáře compoundweb.
