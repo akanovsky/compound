@@ -47,8 +47,8 @@ class Command(BaseCommand):
             for row in reader:
                 # print(row)
                 m = Chem.MolFromSmiles(row[1])
-                print(m)
+                # print(m)
                 rel_path = "/catalog/static/catalog/media/" + row[2] + ".png"
                 filename = script_dir + rel_path
-                print(filename)
+                print(f"Creating {row[2]}")
                 Draw.MolToFile(m, filename)

@@ -39,7 +39,7 @@
 
     {% with imagePath='catalog/media/'|add:obj.inchlkey|add:".png" %}
 
-    <td class="w-25"><img src="{% static imagePath %}" alt="home" class="img-fluid img-thumbnail" /></td>
+    <td class="w-25"><img src="{% static imagePath %}" alt="home" ></td>
     {% endwith %}
 </tr>
     {% endfor %}

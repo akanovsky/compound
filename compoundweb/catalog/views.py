@@ -23,7 +23,7 @@ class CompoundListViewFilter(LoginRequiredMixin,FilterView):
     template_name = "compound_filter.html"
     filterset_class = SetFilter
     context_object_name = 'compounds'
-    paginate_by = 5
+    paginate_by = 20
 
 
 
@@ -34,5 +34,5 @@ class SetList(FilterView):
     model = Compound
     # context_object_name = 'p'
     filterset_class = SetFilter
-    paginate_by = 20
+    paginate_by = 10
     template_name = 'compound_filter.html'

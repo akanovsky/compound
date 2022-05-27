@@ -15,6 +15,7 @@ class Command(BaseCommand):
             next(reader, None)
             temp=[]
             for row in reader:
+                print(row[0])
                 Compound.objects.create(
                     name=row[0],
                     smiles=row[1],
